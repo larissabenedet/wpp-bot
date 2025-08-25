@@ -1,0 +1,98 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv/
+
+# Environment Variables (CRITICAL - Never commit these!)
+.env
+.env.local
+.env.production
+.env.staging
+*.env
+
+# API Keys and Secrets (Extra protection)
+**/secrets/
+**/keys/
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Database Files (Contains user data)
+*.db
+*.sqlite3
+*.sqlite
+interview_bot.db
+
+# Configuration Files with Secrets
+config.json
+secrets.json
+credentials.json
+
+# IDE and Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs (May contain sensitive info)
+*.log
+logs/
+*.out
+
+# OS Generated Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Backup Files
+*.bak
+*.backup
+*.tmp
+
+# ngrok
+ngrok
+ngrok.exe
+
+# Coverage Reports
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+
+# pytest
+.pytest_cache/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json

@@ -2,12 +2,19 @@
 Main FastAPI application entry point.
 This is where we configure our API server and include all routes.
 """
+import logging
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.api import webhooks, users
 from app.core.config import settings
 from app.database.database import engine
 from app.database.models import Base
+
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
 
 # Create database tables
 Base.metadata.create_all(bind=engine)

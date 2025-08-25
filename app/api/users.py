@@ -39,16 +39,16 @@ async def register_user(user_data: UserRegistration):
     Register a new user for the interview bot.
     This endpoint will be called by the frontend form.
     """
+    logger.info(f"New user registration: {user_data.whatsapp_number}")
+    
+    # Validate consent
+    if not user_data.agreed_to_messages:
+        raise HTTPException(
+            status_code=400, 
+            detail="User must agree to receive messages"
+        )
+    
     try:
-        logger.info(f"New user registration: {user_data.whatsapp_number}")
-        
-        # Validate consent
-        if not user_data.agreed_to_messages:
-            raise HTTPException(
-                status_code=400, 
-                detail="User must agree to receive messages"
-            )
-        
         # TODO: Save user to database
         # TODO: Send welcome message via WhatsApp
         # TODO: Schedule first question

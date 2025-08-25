@@ -27,7 +27,7 @@ class User(Base):
     
     id = Column(Integer, primary_key=True, index=True)
     whatsapp_number = Column(String, unique=True, index=True, nullable=False)
-    name = Column(String, nullable=True)
+    name = Column(String, nullable=False)
     preferred_language = Column(Enum(Language), nullable=False)
     tech_area = Column(Enum(TechArea), nullable=False)
     is_active = Column(Boolean, default=True)
